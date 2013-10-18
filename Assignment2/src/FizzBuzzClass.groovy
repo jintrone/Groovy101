@@ -6,4 +6,9 @@
  * To change this template use File | Settings | File Templates.
  */
 class FizzBuzzClass {
+    def factors = [:]
+    def add (map x){
+        factors +=x
+    }
+
 }
