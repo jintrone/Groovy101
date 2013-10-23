@@ -45,7 +45,7 @@ class FizzBuzzMultifunc {
     }
 
     void inspect() {
-        for
+
         element in factor_map
         inspect_list.plus(element)
         return inspect_list
