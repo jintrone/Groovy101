@@ -8,10 +8,13 @@
 class FizzBuzzMultifunc {
     static FizzBuzz (x,y){
         def final_list =[]
+        //factor map should be passed in
         for (i in x..y){
             final_list.plus  ("${i%2?'':factor_map['2']}$${i%3?'':factor_map['3']}${i%5?'':factor_map[5]}"?:i)
         }
-    static Add (map_kit)
+        static Add (map_kit)
+
+        static void main(string[] args) {}
     }
 
 
