@@ -6,6 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 class FizzBuzzClass {
+    static main void 
     def factor_map = ([2:”alpha”,3:”beta”,5:”gamma”])
     static FizzBuzz (factor_map){
         for (i in 1..100){
