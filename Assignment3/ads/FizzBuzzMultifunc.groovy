@@ -19,17 +19,17 @@ class FizzBuzzMultifunc {
     void print(int x, int y) {
 
         //map 1->bar;2->foo;...10;->baz
-        x..y.each { i ->
-            def final_list = []
-            factor_map.each {k,v ->
-                if (i % k == 0) final_list<<v
-
-            }
-            if (final_list.isEmpty()) println i
-            else //println final_list  [foo,bar,baz]
-
-            //final_list.plus("${i % 2 ? '' : factor_map['2']}${ i % 3 ? '' : factor_map['3'] } ${ i % 5 ? '' : factor_map[5] } " ?: i)
-        }
+//        x..y.each { i ->
+//            def final_list = []
+//            factor_map.each {k,v ->
+//                if (i % k == 0) final_list<<v
+//
+//            }
+//            if (final_list.isEmpty()) println i
+//            else //println final_list  [foo,bar,baz]
+//
+//            //final_list.plus("${i % 2 ? '' : factor_map['2']}${ i % 3 ? '' : factor_map['3'] } ${ i % 5 ? '' : factor_map[5] } " ?: i)
+//        }
 
     }
 
@@ -44,7 +44,7 @@ class FizzBuzzMultifunc {
         factor_map -= [map]
     }
 
-    void inspect() {
+    def inspect() {
 
         element in factor_map
         inspect_list.plus(element)
@@ -55,4 +55,4 @@ class FizzBuzzMultifunc {
     }
 }
 
-}
+
