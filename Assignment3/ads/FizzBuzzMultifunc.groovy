@@ -11,14 +11,10 @@ class FizzBuzzMultifunc {
     def inpect_list = []
 
 
-    FizzBuzzMultifunc(Map m) {
-
-    }
 
 
     void print(int x, int y) {
 
-        //map 1->bar;2->foo;...10;->baz
         x..y.each { i ->
             def final_list = []
             factor_map.each {k,v ->
