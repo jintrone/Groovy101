@@ -1,58 +1,44 @@
 /**
  * Created with IntelliJ IDEA.
  * User: howardakumiah
- * Date: 10/23/13
- * Time: 12:21 AM
+ * Date: 11/5/13
+ * Time: 4:59 PM
  * To change this template use File | Settings | File Templates.
  */
-class FizzBuzzMultifunc {
-    def final_list = []
-    def factor_map = [:]
-    def inpect_list = []
+class FizzBuzzTrue {
 
+    void fizzBuzzPrint(Map<Integer, String> x){
 
-    FizzBuzzMultifunc(Map m) {
-
-    }
-
-
-    void print(int x, int y) {
-
-        //map 1->bar;2->foo;...10;->baz
-        x..y.each { i ->
-            def final_list = []
-            factor_map.each {k,v ->
-                if (i % k == 0) final_list<<v
+        (1..100).each { it ->
+            String output = ""
+            x.each { Integer key, String value ->
+                if (it % key == 0) {
+                    output += value
+                }
 
             }
-            if (final_list.isEmpty()) println i
-            else //println final_list  [foo,bar,baz]
 
-            //final_list.plus("${i % 2 ? '' : factor_map['2']}${ i % 3 ? '' : factor_map['3'] } ${ i % 5 ? '' : factor_map[5] } " ?: i)
+            println(output ?: it)
         }
-
     }
-
-    void add(Map map) {
-        map.keys.each {
-
-        }
-        factor_map += [map]
+    void addFactorMap (self, factorMap){
+        self.__factors<<factorMap
     }
-
-    void remove() {
-        factor_map -= [map]
+    void removeFactorInt (self, factorIntList){
+        for (i in factorIntList)
+            if (i in self.__factors)
+                del self.__factors[i]
     }
+    void inspect (self){
+        sortedList = []
+        for (key in self.__factor)
+            sortedList.append(key)
+        sortedList.sort()
 
-    void inspect() {
-
-        element in factor_map
-        inspect_list.plus(element)
-        return inspect_list
-    }
-
-    static void main(String[] args) {
+        for (val in sortedList)
+            print( val,  " => ", self.__factors[val] )
     }
 }
 
-}
+static void main(String[] args) {
+    new FizzBuzzTrue([2: "alpha", 3: "beta", 5: "gamma"])}
