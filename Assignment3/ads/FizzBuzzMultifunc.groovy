@@ -7,9 +7,9 @@
  */
 class FizzBuzzTrue {
 
-    void fizzBuzzPrint(Map<Integer, String> x){
+    void fizzBuzzPrint(Map<Integer, String> x, X, Y){
 
-        (1..100).each { it ->
+            (X..Y).each { it ->
             String output = ""
             x.each { Integer key, String value ->
                 if (it % key == 0) {
@@ -42,3 +42,7 @@ class FizzBuzzTrue {
 
 static void main(String[] args) {
     new FizzBuzzTrue([2: "alpha", 3: "beta", 5: "gamma"])}
+
+/***
+ what should be static? (just to confirm.. I think they are correctly declared)
+ How to properly run code (genral testing tips)
