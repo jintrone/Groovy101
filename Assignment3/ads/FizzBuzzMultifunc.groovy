@@ -44,5 +44,7 @@ static void main(String[] args) {
     new FizzBuzzTrue([2: "alpha", 3: "beta", 5: "gamma"])}
 
 /***
+ * adsfkjladsfadsfasdf
+ */
  what should be static? (just to confirm.. I think they are correctly declared)
  How to properly run code (genral testing tips)
